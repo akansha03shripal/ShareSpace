@@ -26,8 +26,11 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname,"/public")));
 
 
-app.get("/",(req,res)=>{
-    res.send("Hi I'm a root");
+app.get("/",async(req,res)=>{
+    // res.send("Hi I'm a root");
+    const allListing=await Listing.find({});
+    res.render("index.ejs",{allListing});
+
 })
 app.get("/listings",async(req,res)=>{
     const allListing=await Listing.find({});
@@ -80,6 +83,7 @@ await Listing.findByIdAndDelete(id);
 console.log("gpmgpdf");
 res.redirect("/listings");
 })
+
 app.listen(8080,()=>{
     console.log("app is  listening port");
 
