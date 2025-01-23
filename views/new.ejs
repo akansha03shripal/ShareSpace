@@ -1,0 +1,21 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareSpace</title>
+</head> -->
+<%-layout("layouts/boilerplate")%>
+<body>
+    <h1>Add new listing Here</h1>
+    <form method="POST" ACTION="/listings">
+        <input placeholder="Enter titile" name="listing[title]" type="text" ><br><br>
+        <textarea name="listing[description]"> Enter the descripion here</textarea><br><br>
+        <input name="listing[image]" placeholder="enter  the img url " type="text"><br><br>
+        <input name="listing[price]" placeholder="price " type="number"><br><br>
+        <input name="listing[country]" placeholder="country " type="text"><br><br>
+        <input name="listing[location]" placeholder="location" type="text"><br><br>
+        <button>Add</button>
+    </form>
+</body>
+<!-- </html> -->

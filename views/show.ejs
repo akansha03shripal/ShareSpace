@@ -1,0 +1,20 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<% layout("/layouts/boilerplate") %>
+<body>
+<h1>Listing Details</h1>
+
+<li><%=listing.description%></li>
+<img src="<%=listing.image%>"alt="image" width="200",height="200">
+<!-- <li><%=listing.image%></li> -->
+<li><%=listing.location%></li>
+<li>  &#8377 <%=listing.price%></li>
+<li><%=listing.location%></li>
+<li><%=listing.country%></li>
+<a href="/listings/<%=listing._id%>/edit"> Edit your Listng</a>
+</body>
